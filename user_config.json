@@ -1,0 +1,23 @@
+{
+    
+    
+    "BinnanceStreamUrl":"wss://stream.binance.com:9443/stream?streams=",
+    "BinnanceHistoryDataUrl":"https://api.binance.com/api/v3/klines",
+    "Charts": [
+        {"currency" : "BTCUSDT",
+        "interval":"4h",
+        "days_back":"30"
+        },
+        {"currency" : "BTCUSDT",
+            "interval":"1h",
+            "days_back":"30"
+        },
+        {"currency" : "BTCUSDT",
+            "interval":"30m",
+            "days_back":"30"
+            }
+        
+    ]
+
+    
+ }

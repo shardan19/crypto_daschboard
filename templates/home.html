@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+    HELLO{{chart_counter}}
+    {% for chart in charts %}
+    <h1>{{chart.currency}}_{{chart.interval}}</h1>
+    <div class="chart-div">
+        <div class="chart" id="{{chart.currency}}_{{chart.interval}}" name="{{chart.currency}}_{{chart.interval}}">      
+        </div>       
+    </div>
+    {% endfor %}  
+    <div class="chart-div">
+        <div class="chart" id="chart"></div>
+        <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+    </div>
+</div>
+{% endblock %}
