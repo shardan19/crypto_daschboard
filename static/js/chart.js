@@ -5,11 +5,12 @@
 //4. zapytanie updateowe dla wszystkich wykresow
 
 function create_chart(currency,data){
+  
   var chart = LightweightCharts.createChart(document.querySelector('#'+currency), {
     width: 0,
     height: 0,
     layout: {
-      backgroundColor: '#000000',
+      backgroundColor: window.getComputedStyle(document.querySelector('#'+currency)).backgroundColor,
       textColor: 'rgba(255, 255, 255, 0.9)',
     },
     grid: {
@@ -34,6 +35,11 @@ function create_chart(currency,data){
    
   var candleSeries = chart.addCandlestickSeries();
   candleSeries.setData(data);
+  new ResizeObserver(entries => {
+    if (entries.length === 0 || entries[0].target !== document.querySelector('#'+currency)) { return; }
+    const newRect = entries[0].contentRect;
+    chart.applyOptions({ height: newRect.height, width: newRect.width });
+  }).observe(document.querySelector('#'+currency))
   return candleSeries
 }
 
@@ -87,9 +93,7 @@ function create_chart(currency,data){
     })
    
 }
-  }
-    
-  )
+  })
 
 
 

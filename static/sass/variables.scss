@@ -1,0 +1,66 @@
+[data-layout-mode="dark"]{
+    $gray-100: #212529;
+    $gray-200: #2a3042;
+    $gray-300: #32394e;
+    $gray-400: #a6b0cf;
+    $gray-500: #bfc8e2;
+    $gray-600: #c3cbe4;
+    $gray-700: #f6f6f6;
+    $gray-800: #eff2f7;
+    $gray-900: #f8f9fa;
+
+    $primary:#0e4b61;
+    $primary-100:#0D1012;
+    $primary-200:#123B43;
+    $primary-300:#00978C;
+    $primary-400:#49BC88;
+    $primary-500:#9DDE7A;
+    $primary-600:#F9F871;
+
+    $secondary-100:#1c232b;
+    $secondary-200:#2C3036;
+    $secondary-300:#373c42;
+    $secondary-400:#887096;
+    $secondary-500:#BE91B7;
+
+
+    --body-bg: #{$secondary-100};
+    --heading-bg:#{$secondary-200};
+    --heading-color:#{$gray-900};
+    --card-bg:#{$secondary-200};
+    --body-font-family: "Poppins",sans-serif;
+    --chart-color:#{$secondary-200};
+    
+    
+    .h1,.h2,.h3,.h4,h1,h2,h3,h4{
+        color: var(--heading-color);
+    }
+    
+    .vertical-menu{
+        background-color: #{$secondary-300};
+    }
+    .brand-box{
+        background-color: #{$secondary-300};
+    }
+    #vertical-menu-btn{
+        background-color: #{$secondary-200};
+        color: var(--heading-color);
+    }
+    .card{
+        background-color: var(--chart-color);
+    }
+    #page-header{
+        background-color: var(--heading-bg);
+    }
+        
+}
+
+
+
+$breakpoints: (
+    "xs": 0,
+    "sm": 480px,
+    "md": 720px,
+    "lg": 960px,
+    "xl": 1200px
+);

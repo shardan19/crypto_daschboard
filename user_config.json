@@ -5,15 +5,15 @@
     "BinnanceHistoryDataUrl":"https://api.binance.com/api/v3/klines",
     "Charts": [
         {"currency" : "BTCUSDT",
-        "interval":"4h",
+        "interval":"1d",
         "days_back":"30"
         },
         {"currency" : "BTCUSDT",
-            "interval":"1h",
+            "interval":"4h",
             "days_back":"30"
         },
         {"currency" : "BTCUSDT",
-            "interval":"30m",
+            "interval":"1h",
             "days_back":"30"
             }
         
